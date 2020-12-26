@@ -1,36 +1,17 @@
-import * as React from "react";
-import { StyleSheet } from "react-native";
+import React from "react";
+import { View, Text, Image, ScrollView, TextInput } from "react-native";
 
-import EditScreenInfo from "../components/EditScreenInfo";
-import { Text, View } from "../components/Themed";
-
-export default function TabOneScreen() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Main title for tab one</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    </View>
+    <ScrollView>
+      <Text>Some text</Text>
+      <View>
+        <Text>Some more text</Text>
+        <Image
+          source={{ uri: "https://reactnative.dev/docs/assets/p_cat2.png" }}
+          style={{ width: 200, height: 200 }}
+        />
+      </View>
+    </ScrollView>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
-  },
-});
+};
