@@ -1,11 +1,22 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
-const getFullName = (firstName, secondName, thirdName) => {
-  return firstName + " " + secondName + " " + thirdName;
+const Cat = (props) => {
+  return (
+    <View>
+      <Text>Hello, I am a {props.name}!</Text>
+    </View>
+  );
 };
 
-const Cat = () => {
-  return <Text>Hello, I am a {getFullName("Rum", "Tum", "Tugger")}!</Text>;
+const Cafe = () => {
+  return (
+    <View>
+      <Cat name="Moolah" />
+      <Cat name="Teeco" />
+      <Cat name="Mufasa" />
+    </View>
+  );
 };
-export default Cat;
+
+export default Cafe;
