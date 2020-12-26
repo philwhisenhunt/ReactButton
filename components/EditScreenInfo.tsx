@@ -9,7 +9,7 @@ import { Text, View } from "./Themed";
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Added some new text here 🎉</Text>
+      <Text>Hello, world!</Text>
     </View>
   );
 }
